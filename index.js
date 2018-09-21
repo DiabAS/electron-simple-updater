@@ -153,7 +153,7 @@ class SimpleUpdater extends events.EventEmitter {
     this.emit('checking-for-update');
 
     //noinspection JSUnresolvedFunction
-    getUpdatesMeta(opt.url, opt.build, opt.channel, opt.version)
+    getUpdatesMeta(opt.url, opt.localUrl, opt.build, opt.channel, opt.version)
       .then((updateMeta) => {
         if (updateMeta) {
           this.onFoundUpdate(updateMeta);
